@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/tezeh-ops/Jenkins-Zero-To-Hero'
+        //git branch: 'main', url: 'https://github.com/tezeh-ops/CI-CD-pipeline-deploy-k8s-with-ArgCD'
       }
     }
     stage('Build and Test') {
@@ -48,7 +48,7 @@ pipeline {
    
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
+            GIT_REPO_NAME = "CI-CD-pipeline-deploy-k8s-with-ArgCD"
             GIT_USER_NAME = "tezeh-ops"
         }
         steps {
